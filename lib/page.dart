@@ -26,7 +26,10 @@ class Homepage extends StatelessWidget{
             ),
               ),
           SizedBox(height: 5,),
-            Text("lyyattil junction,Kochi,Ernakulam,Ker"),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("lyyattil junction,Kochi,Ernakulam,Ker"),
+            ),
             SizedBox(height: 20,),
         
         Expanded(child: 
@@ -57,12 +60,17 @@ class Homepage extends StatelessWidget{
                          ],
                        ),
                     
-                       Container(
-                        
-                         height: 40,
-                         width: 80,
-                         color: const Color.fromARGB(255, 129, 114, 114),
-                         child: Text(Database.Mylist[index]["name2"],style: TextStyle(fontSize: 10,color: Colors.orange),),
+                       Row(
+                         children: [
+                           Container(
+                           
+                             height: 40,
+                             width: 80,
+                             decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),color: const Color.fromARGB(255, 245, 230, 230)),
+                          
+                             child: Text(Database.Mylist[index]["name2"],style: TextStyle(fontSize: 10,color: Colors.orange),),
+                           ),
+                         ],
                        )
                    
                  ],
@@ -79,9 +87,10 @@ class Homepage extends StatelessWidget{
         ]
       ),
 
-      bottomNavigationBar: BottomNavigationBar(items: [
+      bottomNavigationBar: BottomNavigationBar
+    (items:[
 
-        BottomNavigationBarItem(icon: Icon(Icons.food_bank),label: "SWiggy"),
+        BottomNavigationBarItem(icon: Icon(Icons.food_bank),label: "SWiggy",),
          BottomNavigationBarItem(icon: Icon(Icons.food_bank_sharp),label: "Food"),
           BottomNavigationBarItem(icon: Icon(Icons.mark_chat_read),label: "instamart"),
            BottomNavigationBarItem(icon: Icon(Icons.dining),label: "Dineout"),

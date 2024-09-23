@@ -19,6 +19,7 @@ class Database {
      {
       "name":"GENIE",
       "name1":"PICK-UP & DROP",
+      "name2":"",
       
     },
   ];

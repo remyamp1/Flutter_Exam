@@ -23,4 +23,46 @@ class Database {
       
     },
   ];
+
+  static List<Map> Mylist1 =[
+{
+   "image":"assets/images/p1.jpeg",
+  
+},
+
+{
+   "image":"assets/images/p2.jpeg",
+  
+},
+{
+   "image":"assets/images/p3.jpeg",
+
+},
+{
+   "image":"assets/images/p4.jpeg",
+   
+},
+  ];
+
+  static List<Map> Mylist2 =[
+{
+   "image":"assets/images/p5.jpeg",
+   
+},
+
+{
+   "image":"assets/images/p6.jpeg",
+  
+},
+{
+   "image":"assets/images/p7.jpeg",
+   
+},
+{
+   "image":"assets/images/p8.jpeg",
+   
+},
+  ];
+
+   
 }

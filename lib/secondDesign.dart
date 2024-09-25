@@ -221,7 +221,7 @@ Row(
 
 
 
-SizedBox(height: 5,),
+SizedBox(height: 250,),
 Row(
   children: [
     ElevatedButton(onPressed: (){}, child: Text("Filter"),),
@@ -230,6 +230,15 @@ Row(
     ElevatedButton(onPressed: (){}, child: Text("Cuisines")),
     
   ],
+),
+SizedBox(height: 10),
+Padding(
+  padding: const EdgeInsets.all(8.0),
+  child: Row(
+    children: [
+      Text("Top 116 restaurants to explore",style: TextStyle(fontSize: 20),)
+    ],
+  ),
 )
 
   

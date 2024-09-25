@@ -31,55 +31,96 @@ class Homepage extends StatelessWidget{
               child: Text("lyyattil junction,Kochi,Ernakulam,Ker"),
             ),
             SizedBox(height: 20,),
+            Container(
+              height: 50,
+              width: double.infinity,
+              decoration: BoxDecoration(border: Border.all(),),
+              child: Row(
+                children: [
+                  Text("Search for 'biriyani'"),
+                  Spacer(),
+                  Icon(Icons.search),
+                  Icon(Icons.record_voice_over),
+                ],
+              ),
+            ),
+            SizedBox(height: 20,),
+            Image(image: AssetImage("assets/images/emoji.jpeg")),
+            SizedBox(height: 10,),
+            Text("Welcome Meera",style: TextStyle(fontSize: 25),),
+            SizedBox(height: 5),
+            Text("Enjoy 10 Free Deliveries with Outlrt"),
         
         Expanded(child: 
-       GridView.builder(itemCount: 4,
+       GridView.builder(
          
          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-           crossAxisCount: 2,crossAxisSpacing: 2,mainAxisSpacing: 2,childAspectRatio: 2),
+           crossAxisCount: 2,mainAxisSpacing: 2,crossAxisSpacing: 2,),
+           itemCount: 4,
         itemBuilder: (context,index){
-        return Column(
-           children: [
-           Container(
-               height: 200,
-               width: double.infinity,
-               decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),color: const Color.fromARGB(255, 245, 230, 230)),
-               child: Column(
-                 children: [
-                   Row(
-                     mainAxisAlignment: MainAxisAlignment.start,
-                     crossAxisAlignment: CrossAxisAlignment.start,
-                     children: [
-                       Text(Database.Mylist[index]["name"],style: TextStyle(color: Colors.black,fontSize: 20),),
-                     ]
-                   ),
-                       
-                       Row(
-                         children: [
-                           Text(Database.Mylist[index]["name1"],style: TextStyle(color: Colors.black,fontSize: 15)),
-                         ],
-                       ),
+        return Container(
+            height: 500,
+            width: double.infinity,
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),color: const Color.fromARGB(255, 245, 230, 230)),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(Database.Mylist[index]["name"],style: TextStyle(color: Colors.black,fontSize: 20),),
+                  ]
+                ),
                     
-                       Row(
-                         children: [
-                           Container(
+                    Row(
+                      children: [
+                        Text(Database.Mylist[index]["name1"],style: TextStyle(color: Colors.black,fontSize: 15)),
+                      ],
+                    ),
+                 
+                    Row(
+                      children: [
+                        Container(
+                        
+                          height: 40,
+                          width: 80,
+                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),color: const Color.fromARGB(255, 245, 230, 230)),
+                       
+                          child: Text(Database.Mylist[index]["name2"],style: TextStyle(fontSize: 10,color: Colors.orange),),
+                        ),
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Stack(
+                        children: [
+                          Container(
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 110,),
+                              child: CircleAvatar(
+                                radius: 45,
+                              
+                                foregroundImage: AssetImage(Database.Mylist[index]["image"]),
+                              
+                              ),
+                            ),
                            
-                             height: 40,
-                             width: 80,
-                             decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),color: const Color.fromARGB(255, 245, 230, 230)),
+                          ),
+                        ]
+                    
+                              
+
+                            
                           
-                             child: Text(Database.Mylist[index]["name2"],style: TextStyle(fontSize: 10,color: Colors.orange),),
-                           ),
-                         ],
-                       )
-                   
-                 ],
-               ),
-               
-               
-             ),
-         ],
-       );
+                        
+                      ),
+                    ),
+                
+              ],
+            ),
+            
+            
+          );
        
         }),
 
@@ -88,7 +129,10 @@ class Homepage extends StatelessWidget{
       ),
 
       bottomNavigationBar: BottomNavigationBar
-    (items:[
+    (
+      selectedItemColor: Colors.red,
+      unselectedItemColor: Colors.grey,
+      items:[
 
         BottomNavigationBarItem(icon: Icon(Icons.food_bank),label: "SWiggy",),
          BottomNavigationBarItem(icon: Icon(Icons.food_bank_sharp),label: "Food"),

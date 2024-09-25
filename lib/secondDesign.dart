@@ -17,7 +17,7 @@ class Design extends StatelessWidget
                     padding: const EdgeInsets.all(8.0),
                     child: CircleAvatar(
                       radius: 40,
-                      foregroundImage: AssetImage(Database.Mylist1[index]["image"]),
+                      foregroundImage: AssetImage(Database.Mylist1[index]),
                     ),
                     
                   ),
@@ -27,6 +27,7 @@ class Design extends StatelessWidget
             })
           ),
         ),
+        
          Row(
            children: [
              Text("Pothichoru"),
@@ -82,31 +83,119 @@ Row(
 ),
 SizedBox(height: 10,),
 
-Row(
+
+
+Column(
   children: [
-    Container(
-      height: 150,
-      width: 130,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(15),),
-      child: Image(image: AssetImage("assets/images/p8.jpeg")),
+    Row(
+      children: [
+      Stack(
+          children:[ Container(
+            height: 150,
+            width: 130,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(25),
+              image: DecorationImage(image: AssetImage("assets/images/p8.jpeg"))),
+            
+          ),
+          Positioned(
+            top: 10,
+            right: 10,
+            child: Icon(Icons.favorite,color: Colors.white,),
+          ),
+          Positioned(
+            top: 80,
+            left: 10,
+            child: Text("FLAT DEAL",style: TextStyle(fontSize: 20,color: Colors.white),),
+          
+          ),
+          
+           Positioned(
+            top: 100,
+            left: 10,
+            
+            child: Text("100 OFF",style: TextStyle(fontSize: 25,color: Colors.white))
+          ),
+           Positioned(
+            top: 125,
+            left: 10,
+            
+            child: Text("ABOVE 199",style: TextStyle(color: const Color.fromARGB(255, 138, 137, 137)))
+          )
+          ],
+        ),
+        SizedBox(width: 2,),
+        Stack(
+          children:[ Container(
+            height: 150,
+            width:130,
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(25),
+            image: DecorationImage(image: AssetImage("assets/images/p2.jpeg"),),),
+          ),
+           Positioned(
+            top: 10,
+            right: 10,
+            child: Icon(Icons.favorite,color: Colors.white,),
+          ),
+          Positioned(
+            top: 80,
+            left: 10,
+            child: Text("FLAT DEAL",style: TextStyle(fontSize: 20,color: Colors.white),),
+          
+          ),
+          
+           Positioned(
+            top: 100,
+            left: 10,
+            
+            child: Text("100 OFF",style: TextStyle(fontSize: 25,color: Colors.white))
+          ),
+           Positioned(
+            top: 125,
+            left: 10,
+            
+            child: Text("ABOVE 199",style: TextStyle(color: const Color.fromARGB(255, 138, 137, 137)))
+          )
+      ]
+        ),
+       
+       
+      Stack(
+          children:[ 
+            Container(
+            height: 150,
+            width: 130,
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(25),
+            image: DecorationImage(image: AssetImage("assets/images/p6.jpeg"))),
+          ),
+           Positioned(
+            top: 10,
+            right: 10,
+            child: Icon(Icons.favorite,color: Colors.white,),
+          ),
+          Positioned(
+            top: 80,
+            left: 10,
+            child: Text("FLAT DEAL",style: TextStyle(fontSize: 20,color: Colors.white),),
+          
+          ),
+          
+           Positioned(
+            top: 100,
+            left: 10,
+            
+            child: Text("100 OFF",style: TextStyle(fontSize: 25,color: Colors.white))
+          ),
+           Positioned(
+            top: 125,
+            left: 10,
+            
+            child: Text("ABOVE 199",style: TextStyle(color: const Color.fromARGB(255, 138, 137, 137)))
+          )
+          ]
+        )
+      ],
     ),
-    SizedBox(width: 5,),
-    Container(
-      height: 150,
-      width:130,
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(15)),
-     child: Image(image: AssetImage("assets/images/p2.jpeg"),),
-     
-    ),
-   
-    SizedBox(width: 5,),
-    Container(
-      height: 150,
-      width: 130,
-       decoration: BoxDecoration(borderRadius: BorderRadius.circular(15)),
-      child: Image(image: AssetImage("assets/images/p6.jpeg")),
-    )
   ],
 ),
 Row(
@@ -128,6 +217,10 @@ Row(
        Text("Kerala,South ",style: TextStyle(color: const Color.fromARGB(255, 128, 126, 126)),),
   ],
 ),
+
+
+
+
 SizedBox(height: 5,),
 Row(
   children: [

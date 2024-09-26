@@ -101,7 +101,7 @@ Column(
           Positioned(
             top: 10,
             right: 10,
-            child: Icon(Icons.favorite,color: Colors.white,),
+            child: Icon(Icons.favorite_border_outlined,color: Colors.white,),
           ),
           Positioned(
             top: 80,
@@ -135,7 +135,7 @@ Column(
            Positioned(
             top: 10,
             right: 10,
-            child: Icon(Icons.favorite,color: Colors.white,),
+            child: Icon(Icons.favorite_border_outlined,color: Colors.white,),
           ),
           Positioned(
             top: 80,
@@ -171,7 +171,7 @@ Column(
            Positioned(
             top: 10,
             right: 10,
-            child: Icon(Icons.favorite,color: Colors.white,),
+            child: Icon(Icons.favorite_border_outlined,color: Colors.white,),
           ),
           Positioned(
             top: 80,
@@ -224,9 +224,12 @@ Row(
 SizedBox(height: 250,),
 Row(
   children: [
-    ElevatedButton(onPressed: (){}, child: Text("Filter"),),
+    ElevatedButton(onPressed: (){},child: Text("Filter"),),
+    Spacer(),
     ElevatedButton(onPressed: (){}, child: Text("Sort by"),),
+    Spacer(),
     ElevatedButton(onPressed: (){}, child: Text("Fast Delivery")),
+    Spacer(),
     ElevatedButton(onPressed: (){}, child: Text("Cuisines")),
     
   ],
